@@ -15,6 +15,7 @@ export const handler = async (
           statusCode: 200,
           headers: {
             "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
           },
           body: JSON.stringify(product),
         }
@@ -22,6 +23,7 @@ export const handler = async (
           statusCode: 400,
           headers: {
             "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
           },
           body: JSON.stringify({ message: "Product not found" }),
         };
@@ -30,6 +32,7 @@ export const handler = async (
       statusCode: 500,
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify({ message: "Internal server error" }),
     };
